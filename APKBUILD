@@ -26,12 +26,13 @@ dkms() {
 }
 
 daemon() {
-	depends="python3 py3-setproctitle py3-gobject3 gtk+3.0"
+	depends="openrazer-kernel-modules-dkms python3 py3-setproctitle py3-gobject3 gtk+3.0"
 	cd "$builddir"
 	make DESTDIR="$subpkgdir" daemon_install
 }
 
 py3() {
+	depends="openrazer-daemon py3-numpy"
 	cd "$builddir"
 	make DESTDIR="$subpkgdir" python_library_install
 }
