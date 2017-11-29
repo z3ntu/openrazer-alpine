@@ -9,6 +9,7 @@ url="https://openrazer.github.io"
 arch="all"
 license="GPL2"
 depends="openrazer-kernel-modules-dkms openrazer-daemon py3-openrazer"
+makedepends="python3"
 install=""
 subpackages="openrazer-kernel-modules-dkms openrazer-daemon py3-openrazer:py3"
 source="$_pkgname-$pkgver.tar.gz::https://github.com/openrazer/openrazer/archive/v$pkgver.tar.gz
